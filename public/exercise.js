@@ -12,7 +12,8 @@ const distanceInput = document.querySelector("#distance");
 const completeButton = document.querySelector("button.complete");
 const addButton = document.querySelector("button.add-another");
 const toast = document.querySelector("#toast");
-const newWorkout = document.querySelector(".new-workout")
+const newWorkout = document.querySelector(".new-workout");
+import {API} from "./api.js";
 
 let workoutType = null;
 let shouldNavigateAway = false;
@@ -97,7 +98,7 @@ function validateInputs() {
 
 async function handleFormSubmit(event) {
   event.preventDefault();
-
+  console.log(event);
   let workoutData = {};
 
   if (workoutType === "cardio") {
@@ -114,7 +115,8 @@ async function handleFormSubmit(event) {
     workoutData.duration = Number(resistanceDurationInput.value.trim());
   }
 
-  await API.addExercise(workoutData);
+  var result= await API.addExercise(workoutData);
+  console.log(result);
   clearInputs();
   toast.classList.add("success");
 }
