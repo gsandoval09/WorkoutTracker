@@ -1,3 +1,4 @@
+// import {API} from "./api.js";
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);

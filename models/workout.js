@@ -34,7 +34,7 @@ exercises: [{
     },
 },
 
-]})
+]}, {"collection": "workout"})
 
-const Workout = mongoose.model("Workout", WorkoutSchema);
+const Workout = mongoose.model("Workout", WorkoutSchema, "workout");
 module.exports = Workout;

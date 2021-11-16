@@ -1,3 +1,4 @@
+// const API = require('api.js').API;
 function generatePalette() {
   const arr = [
     '#003f5c',
