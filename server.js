@@ -15,7 +15,12 @@ app.use(require("./routes/apiroutes"));
 app.use(require("./routes/htmlroutes"));
 
 mongoose.connect(process.env.MNGODB_URI || "mongodb://localhost/workoutdb",
-{ useNewUrlParser: true });
+{ useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+ });
+
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
