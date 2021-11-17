@@ -25,11 +25,11 @@ Then run the following command: npm run seed
 
 ```
 
-Then run: npm run start
+Then run: nodemon server.js
 
 ```
 
-Open in your browser Localhost3000 and you will be directed to WorkoutTracker
+Open in your browser, Localhost3000 , and you will be directed to the functioning WorkoutTracker application.
 
 ```
 
@@ -37,6 +37,7 @@ Open in your browser Localhost3000 and you will be directed to WorkoutTracker
 
 ![Image](workoutpic.png)
 
+![Image](workoutstats.png)
 
 ## Built With
 
