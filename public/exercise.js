@@ -98,7 +98,7 @@ function validateInputs() {
 
 async function handleFormSubmit(event) {
   event.preventDefault();
-  console.log(event);
+  
   let workoutData = {};
 
   if (workoutType === "cardio") {
@@ -115,8 +115,7 @@ async function handleFormSubmit(event) {
     workoutData.duration = Number(resistanceDurationInput.value.trim());
   }
 
-  var result= await API.addExercise(workoutData);
-  console.log(result);
+  await API.addExercise(workoutData);
   clearInputs();
   toast.classList.add("success");
 }
